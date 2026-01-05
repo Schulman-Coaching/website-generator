@@ -1,0 +1,27 @@
+{
+  "name": "website-generator",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm run --parallel dev",
+    "dev:web": "pnpm --filter @website-generator/web dev",
+    "dev:api": "pnpm --filter @website-generator/api dev",
+    "build": "pnpm run --parallel build",
+    "build:web": "pnpm --filter @website-generator/web build",
+    "build:api": "pnpm --filter @website-generator/api build",
+    "lint": "pnpm run --parallel lint",
+    "typecheck": "pnpm run --parallel typecheck",
+    "db:generate": "pnpm --filter @website-generator/api db:generate",
+    "db:migrate": "pnpm --filter @website-generator/api db:migrate",
+    "db:push": "pnpm --filter @website-generator/api db:push",
+    "db:studio": "pnpm --filter @website-generator/api db:studio"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}
